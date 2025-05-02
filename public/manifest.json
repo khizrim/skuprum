@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "skuprum",
+  "short_name": "Skuprum",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Пункты приема металлолома в Москве. Принимаем черный и цветной металл по выгодным ценам. Оперативный расчет, честное взвешивание, вывоз металлолома."
+}
