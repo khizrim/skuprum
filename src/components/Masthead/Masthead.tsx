@@ -1,9 +1,4 @@
-import {
-  component$,
-  useSignal,
-  useTask$,
-  useVisibleTask$,
-} from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { metalOptions } from '~/utils/constants';
 
 export interface MastheadProps {}
@@ -29,7 +24,7 @@ export const Masthead = component$<MastheadProps>(() => {
   const whatsappHref = useSignal('');
 
   // Счёт с рандомной дельтой
-  useTask$(({ track }) => {
+  useVisibleTask$(({ track }) => {
     track(() => weight.value);
     track(() => selectedMetal.value);
 
@@ -87,7 +82,7 @@ export const Masthead = component$<MastheadProps>(() => {
     }
   });
 
-  useTask$(({ track }) => {
+  useVisibleTask$(({ track }) => {
     const touchedWeight = track(() => userTouchedWeight.value);
     const touchedMetal = track(() => userTouchedMetal.value);
 
@@ -118,6 +113,7 @@ export const Masthead = component$<MastheadProps>(() => {
           </span>
           <input
             type="text"
+            aria-label={'Вес металла'}
             inputMode="numeric"
             class="absolute inset-0 w-full h-full px-4 py-2 text-transparent caret-black focus:outline-none"
             pattern="\d*"
@@ -147,6 +143,7 @@ export const Masthead = component$<MastheadProps>(() => {
             {selectedMetal.value}
           </span>
           <select
+            aria-label={'Вид металла'}
             class="absolute inset-0 w-full h-full text-base font-normal opacity-0 cursor-pointer"
             bind:value={selectedMetal}
             onChange$={() => {

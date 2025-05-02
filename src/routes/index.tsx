@@ -1,13 +1,25 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Masthead } from '~/components/Masthead/Masthead';
-import { NearestLocation } from '~/components/NearestLocation/NearestLocation';
+import { WhatWeAccept } from '~/components/WhatWeAccept/WhatWeAccept';
+import { WhyChooseUs } from '~/components/WhyChooseUs/WhyChooseUs';
+import { HowWeWork } from '~/components/HowWeWork/HowWeWork';
+import { OurApproach } from '~/components/OurApproach/OurApproach';
+import { YandexReviews } from '~/components/YandexReviews/YandexReviews';
+import { CallbackForm } from '~/components/CallbackForm/CallbackForm';
+import { MapWithLocation } from '~/components/MapWithLocation/MapWithLocation';
 
 export default component$(() => {
   return (
     <>
       <Masthead />
-      <NearestLocation />
+      <WhatWeAccept />
+      <OurApproach />
+      <WhyChooseUs />
+      <HowWeWork />
+      <YandexReviews />
+      <MapWithLocation />
+      <CallbackForm />
     </>
   );
 });
@@ -75,48 +87,54 @@ export const head: DocumentHead = {
       name: 'twitter:image',
       content: 'https://skuprum.ru/preview.jpg',
     },
+
+    // Google Site Verification
+    {
+      name: 'google-site-verification',
+      content: 'oSJ-LpZOxWVGuoYDmUpi8gI1KIFmb3sXjYKAN22ExXo',
+    },
   ],
-  // 👇 Structured Data (JSON-LD)
   links: [],
-  // scripts: [
-  //   {
-  //     type: 'application/ld+json',
-  //     children: `
-  //     {
-  //       "@context": "https://schema.org",
-  //       "@type": "LocalBusiness",
-  //       "name": "Приём металла — Skuprum",
-  //       "image": "https://skuprum.ru/preview.jpg",
-  //       "url": "https://skuprum.ru",
-  //       "telephone": "+7-926-410-63-63",
-  //       "email": "9264106363@mail.ru",
-  //       "address": {
-  //         "@type": "PostalAddress",
-  //         "addressLocality": "Москва",
-  //         "streetAddress": "ул. Смольная, д. 2"
-  //       },
-  //       "openingHoursSpecification": {
-  //         "@type": "OpeningHoursSpecification",
-  //         "dayOfWeek": [
-  //           "Monday",
-  //           "Tuesday",
-  //           "Wednesday",
-  //           "Thursday",
-  //           "Friday",
-  //           "Saturday",
-  //           "Sunday"
-  //         ],
-  //         "opens": "08:00",
-  //         "closes": "21:00"
-  //       },
-  //       "priceRange": "₽",
-  //       "aggregateRating": {
-  //         "@type": "AggregateRating",
-  //         "ratingValue": "4.9",
-  //         "reviewCount": "148"
-  //       }
-  //     }
-  //     `,
-  //   },
-  // ],
+  scripts: [
+    {
+      key: 'application/ld+json',
+      props: {
+        type: 'application/ld+json',
+      },
+      script: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'Приём металла — Skuprum',
+        image: 'https://skuprum.ru',
+        url: 'https://skuprum.ru',
+        telephone: '8 (499) 390-79-15',
+        email: '9264106363@mail.ru',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Москва',
+          streetAddress: 'ул. Смольная, д. 2',
+        },
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday',
+          ],
+          opens: '08:00',
+          closes: '23:00',
+        },
+        priceRange: '₽',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.7',
+          reviewCount: '25',
+        },
+      }),
+    },
+  ],
 };

@@ -60,7 +60,7 @@ export const NearestLocation = component$(() => {
 
           nearest.value = closest;
         },
-        (err) => {
+        () => {
           error.value = 'Не удалось определить местоположение.';
         },
         { enableHighAccuracy: true }

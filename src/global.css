@@ -1,11 +1,1 @@
-@import "tailwindcss";
-
-@import "tailwindcss";
-
-@import "tailwindcss";
-
-/* styles/global.css */
-select.select-reset option {
-    font-size: 1rem;
-    font-weight: 400;
-}
+@import 'tailwindcss';
