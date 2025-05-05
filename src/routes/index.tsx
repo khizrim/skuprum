@@ -1,27 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Masthead } from '~/components/Masthead/Masthead';
-import { WhatWeAccept } from '~/components/WhatWeAccept/WhatWeAccept';
-import { WhyChooseUs } from '~/components/WhyChooseUs/WhyChooseUs';
-import { HowWeWork } from '~/components/HowWeWork/HowWeWork';
-import { OurApproach } from '~/components/OurApproach/OurApproach';
-import { YandexReviews } from '~/components/YandexReviews/YandexReviews';
-import { CallbackForm } from '~/components/CallbackForm/CallbackForm';
-import { MapWithLocation } from '~/components/MapWithLocation/MapWithLocation';
 
 export default component$(() => {
-  return (
-    <>
-      <Masthead />
-      <WhatWeAccept />
-      <OurApproach />
-      <WhyChooseUs />
-      <HowWeWork />
-      <YandexReviews />
-      <MapWithLocation />
-      <CallbackForm />
-    </>
-  );
+  return <></>;
 });
 
 export const head: DocumentHead = {
@@ -45,8 +26,6 @@ export const head: DocumentHead = {
       name: 'viewport',
       content: 'width=device-width, initial-scale=1.0',
     },
-
-    // Open Graph
     {
       property: 'og:title',
       content: 'Приём металлолома в Москве — высокие цены, быстрый вывоз',
@@ -66,10 +45,8 @@ export const head: DocumentHead = {
     },
     {
       property: 'og:image',
-      content: 'https://skuprum.ru/preview.jpg', // обязательно заменить на реальное изображение
+      content: 'https://skuprum.ru/preview.jpg',
     },
-
-    // Twitter
     {
       name: 'twitter:card',
       content: 'summary_large_image',
@@ -87,8 +64,6 @@ export const head: DocumentHead = {
       name: 'twitter:image',
       content: 'https://skuprum.ru/preview.jpg',
     },
-
-    // Google Site Verification
     {
       name: 'google-site-verification',
       content: 'oSJ-LpZOxWVGuoYDmUpi8gI1KIFmb3sXjYKAN22ExXo',

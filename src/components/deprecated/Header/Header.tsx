@@ -7,7 +7,7 @@ export const Header = component$<HeaderProps>(() => {
     <header class="px-4 py-8 sm:px-6 lg:px-12 max-w-6xl mx-auto text-left">
       <div class="max-w-6xl mx-auto flex items-center justify-between">
         <a
-          href="/"
+          href="/public"
           class="text-2xl font-extrabold tracking-tight text-blue-700"
         >
           Skuprum
