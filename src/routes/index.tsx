@@ -1,8 +1,13 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Masthead } from '~/components/Masthead';
 
 export default component$(() => {
-  return <></>;
+  return (
+    <>
+      <Masthead />
+    </>
+  );
 });
 
 export const head: DocumentHead = {
@@ -91,15 +96,7 @@ export const head: DocumentHead = {
         },
         openingHoursSpecification: {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: [
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-            'Saturday',
-            'Sunday',
-          ],
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
           opens: '08:00',
           closes: '23:00',
         },

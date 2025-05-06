@@ -1,12 +1,3 @@
-/*
- * WHAT IS THIS FILE?
- *
- * It's the entry point for Netlify Edge when building for production.
- *
- * Learn more about the Netlify integration here:
- * - https://qwik.dev/docs/deployments/netlify-edge/
- *
- */
 import {
   createQwikCity,
   type PlatformNetlify,
