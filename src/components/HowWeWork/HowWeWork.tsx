@@ -1,5 +1,7 @@
 import { component$ } from '@builder.io/qwik';
+import { Level } from '~/components/Level';
 import typo from 'ru-typo';
+import { CTAButtons } from '~/components/CTAButtons';
 
 export const HowWeWork = component$(() => {
   const steps = [
@@ -30,30 +32,47 @@ export const HowWeWork = component$(() => {
     },
   ];
 
+  // Контакты для CTA
+  const phoneHref = 'tel:+79199947355';
+  const whatsappText = encodeURIComponent(
+    'Здравствуйте! Я хочу сдать кабель. Можете, пожалуйста, рассчитать стоимость?',
+  );
+
+  const whatsappHref = `https://wa.me/79199947355?text=${whatsappText}`;
+
   return (
-    <section class="px-4 py-8 sm:px-6 lg:px-12 max-w-6xl mx-auto text-left">
-      <h2 class="text-4xl font-bold text-center mb-16">
+    <Level id="how-we-work" as="section" class="max-w-6xl mx-auto text-left">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12">
         Как проходит приём кабеля
       </h2>
 
-      <div class="flex flex-col flex-wrap lg:flex-row items-center justify-center gap-12 max-w-6xl mx-auto relative">
+      {/* Используем flex-wrap для гармоничного ряда карточек */}
+      <div class="flex flex-wrap justify-center gap-8">
         {steps.map((step, index) => (
           <div
             key={index}
-            class="relative bg-blue-50 rounded-2xl px-6 py-8 text-center w-full min-w-[300px] max-w-[260px] h-[300px] flex flex-col justify-center items-center text-wrap"
+            class="relative bg-blue-50 rounded-2xl p-6 pt-12 flex flex-col items-start gap-4 text-left w-64"
           >
-            <div class="flex flex-col items-center justify-center h-full">
-              <div class="text-5xl mb-4">{step.icon}</div>
-              <h3 class="text-xl font-semibold mb-2">
-                {typo(step.title, { header: true })}
-              </h3>
-              <p class="text-base text-gray-700">
-                {typo(step.desc, { digits: true })}
-              </p>
+            {/* Номер шага */}
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-blue-600 font-bold">
+                {String(index + 1).padStart(2, '0')}
+              </span>
             </div>
+
+            {/* Иконка шага */}
+            <div class="text-4xl mb-2">{step.icon}</div>
+
+            {/* Заголовок шага */}
+            <h3 class="text-xl font-semibold mb-1">{typo(step.title, { header: true })}</h3>
+
+            {/* Описание шага */}
+            <p class="text-base text-gray-600">{typo(step.desc, { digits: true })}</p>
           </div>
         ))}
+
+        <CTAButtons phoneHref={phoneHref} whatsappHref={whatsappHref} />
       </div>
-    </section>
+    </Level>
   );
 });

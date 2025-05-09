@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+:root {
+    overflow-x: hidden;
+    max-width: 100dvw;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100dvw;
+    overflow-x: hidden;
+}
