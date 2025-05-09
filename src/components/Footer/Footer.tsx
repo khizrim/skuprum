@@ -40,7 +40,7 @@ export const Footer = component$(() => {
   return (
     <Level
       as="footer"
-      class="sm:flex-row max-w-6xl px-4 py-10 sm:px-6 lg:px-12 w-full text-base text-gray-700 mx-auto sm:items-start"
+      class="sm:flex-row max-w-6xl px-8 py-10 sm:px-8 lg:px-12 w-full text-base text-gray-700 mx-auto sm:items-start"
     >
       <div class="flex-1">
         <Logo size="sm" />
