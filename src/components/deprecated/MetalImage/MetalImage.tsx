@@ -24,7 +24,7 @@ export const MetalImage = component$(({ src, alt }: { src: string; alt: string }
   });
 
   return (
-    <div class="relative w-full h-full">
+    <>
       <img
         src={currentSrc.value}
         alt={alt}
@@ -39,6 +39,6 @@ export const MetalImage = component$(({ src, alt }: { src: string; alt: string }
           }`}
         />
       )}
-    </div>
+    </>
   );
 });

@@ -38,46 +38,43 @@ export const Footer = component$(() => {
   };
 
   return (
-    <footer
-      class="max-w-6xl px-4 py-10 sm:px-6 lg:px-12 w-full text-base text-gray-700 mx-auto"
-      itemScope
-      itemType="https://schema.org/Organization"
+    <Level
+      as="footer"
+      class="sm:flex-row max-w-6xl px-4 py-10 sm:px-6 lg:px-12 w-full text-base text-gray-700 mx-auto sm:items-start"
     >
-      <Level class="sm:items-start">
-        <div class="flex-1">
-          <Logo size="sm" />
-          <p class="text-gray-600">
-            <span itemProp="name">Skuprum</span> &copy; {currentYear}. Все права защищены.
-          </p>
-        </div>
+      <div class="flex-1">
+        <Logo size="sm" />
+        <p class="text-gray-600">
+          <span itemProp="name">Skuprum</span> &copy; {currentYear}. Все права защищены.
+        </p>
+      </div>
 
-        <div class="flex-1 mt-6 sm:mt-0">
-          <nav aria-label="Контактная информация">
-            <ul class="space-y-2">
-              {phones.map((phone) => (
-                <li key={phone.number}>
-                  <Phone phone={phone} />
-                </li>
-              ))}
-              <li>
-                <Email email={email} />
+      <div class="flex-1 mt-6 sm:mt-0">
+        <nav aria-label="Контактная информация">
+          <ul class="space-y-2">
+            {phones.map((phone) => (
+              <li key={phone.number}>
+                <Phone phone={phone} />
               </li>
-            </ul>
-          </nav>
-        </div>
+            ))}
+            <li>
+              <Email email={email} />
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <div class="flex-1 mt-6 sm:mt-0 sm:text-right">
-          <nav aria-label="Адреса организации">
-            <ul class="space-y-2">
-              {addresses.map((address) => (
-                <li key={address.text}>
-                  <Address address={address} />
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </Level>
-    </footer>
+      <div class="flex-1 mt-6 sm:mt-0 sm:text-right">
+        <nav aria-label="Адреса организации">
+          <ul class="space-y-2">
+            {addresses.map((address) => (
+              <li key={address.text}>
+                <Address address={address} />
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </Level>
   );
 });

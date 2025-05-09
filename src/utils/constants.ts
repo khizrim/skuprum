@@ -5,8 +5,8 @@ type MetalProps = {
 };
 
 export const metalOptions: MetalProps[] = [
-  { label: 'кабеля', price: 750, image: '/images/cables.png' },
   { label: 'меди', price: 800, image: '/images/copper.png' },
+  { label: 'кабеля', price: 750, image: '/images/cables.png' },
   { label: 'латуни', price: 480, image: '/images/brass.png' },
   { label: 'бронзы', price: 500, image: '/images/bronze.png' },
   { label: 'алюминия', price: 190, image: '/images/aluminium.png' },

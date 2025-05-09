@@ -2,7 +2,7 @@ import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { metalOptions } from '~/utils/constants';
 import { MetalImage } from '~/components/deprecated/MetalImage/MetalImage';
 
-export interface MastheadProps {}
+export interface MastheadProps { }
 
 export const Masthead = component$<MastheadProps>(() => {
   const autoUpdateTimer = useSignal<ReturnType<typeof setInterval> | null>(
@@ -105,9 +105,8 @@ export const Masthead = component$<MastheadProps>(() => {
               style={{ width: numberWidth.value }}
             >
               <span
-                class={`inline-block px-4 py-2 bg-transparent tracking-tight outline-4 outline-dashed rounded-2xl outline-blue-700 whitespace-nowrap transition duration-300 ${
-                  flashWeight.value ? 'bg-yellow-100' : ''
-                }`}
+                class={`inline-block px-4 py-2 bg-transparent tracking-tight outline-4 outline-dashed rounded-2xl outline-blue-700 whitespace-nowrap transition duration-300 ${flashWeight.value ? 'bg-yellow-100' : ''
+                  }`}
                 ref={numberRef}
               >
                 {weight.value || 0}
@@ -136,9 +135,8 @@ export const Masthead = component$<MastheadProps>(() => {
               style={{ width: selectWidth.value }}
             >
               <span
-                class={`inline-block px-4 py-2 bg-transparent tracking-tight outline-4 outline-dashed rounded-2xl outline-blue-700 whitespace-nowrap transition duration-300 ${
-                  flashMetal.value ? 'bg-yellow-100' : ''
-                }`}
+                class={`inline-block px-4 py-2 bg-transparent tracking-tight outline-4 outline-dashed rounded-2xl outline-blue-700 whitespace-nowrap transition duration-300 ${flashMetal.value ? 'bg-yellow-100' : ''
+                  }`}
                 ref={selectRef}
               >
                 {selectedMetal.value}

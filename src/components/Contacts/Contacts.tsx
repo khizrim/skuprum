@@ -31,17 +31,7 @@ export const Contacts = component$<ContactsProps>(({ showEmail = false }) => {
       itemScope
       itemType="https://schema.org/Organization"
     >
-      <span
-        class="text-xl"
-        role="img"
-        aria-label="Контакты"
-      >
-        {showEmail ? '📞 ✉️' : '📞'}
-      </span>
-      <div
-        class="flex items-center gap-4"
-        aria-label="Контактная информация"
-      >
+      <div class="hidden sm:flex items-center gap-4" aria-label="Контактная информация">
         <div class="sm:flex sm:gap-4">
           <div class="rounded-md whitespace-nowrap px-5 py-2.5 text-lg font-medium">
             <Phone phone={phones[0]} />

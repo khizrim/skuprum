@@ -1,11 +1,24 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Masthead } from '~/components/Masthead';
+import { WhatWeAccept } from '~/components/WhatWeAccept';
+import { OurApproach } from '~/components/OurApproach';
+import { WhyChooseUs } from '~/components/WhyChooseUs';
+import { HowWeWork } from '~/components/HowWeWork';
+import { YandexReviews } from '~/components/YandexReviews';
+import { MapWithLocation } from '~/components/MapWithLocation';
 
 export default component$(() => {
   return (
     <>
       <Masthead />
+      <WhatWeAccept />
+      <OurApproach />
+      <WhyChooseUs />
+      <MapWithLocation />
+      <HowWeWork />
+      <YandexReviews />
+      {/*<CallbackForm />*/}
     </>
   );
 });
