@@ -93,6 +93,10 @@ export const head: DocumentHead = {
         .replace(/\s+/g, ' ')
         .trim(),
     },
+    {
+      name: 'theme-color',
+      content: '#fff',
+    },
   ],
   links: [],
   scripts: [
