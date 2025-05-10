@@ -3,7 +3,22 @@
   "name": "skuprum",
   "short_name": "Skuprum",
   "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "Пункты приема металлолома в Москве. Принимаем черный и цветной металл по выгодным ценам. Оперативный расчет, честное взвешивание, вывоз металлолома."
+  "description": "Пункты приема металлолома в Москве. Принимаем черный и цветной металл по выгодным ценам. Оперативный расчет, честное взвешивание, вывоз металлолома.",
+  "icons": [
+    {
+      "src": "/public/icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/public/icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

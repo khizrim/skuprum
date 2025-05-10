@@ -18,7 +18,6 @@ export default component$(() => {
       <MapWithLocation />
       <HowWeWork />
       <YandexReviews />
-      {/*<CallbackForm />*/}
     </>
   );
 });
@@ -63,7 +62,7 @@ export const head: DocumentHead = {
     },
     {
       property: 'og:image',
-      content: 'https://skuprum.ru/preview.jpg',
+      content: 'https://skuprum.ru/og.png',
     },
     {
       name: 'twitter:card',
@@ -80,11 +79,7 @@ export const head: DocumentHead = {
     },
     {
       name: 'twitter:image',
-      content: 'https://skuprum.ru/preview.jpg',
-    },
-    {
-      name: 'google-site-verification',
-      content: 'oSJ-LpZOxWVGuoYDmUpi8gI1KIFmb3sXjYKAN22ExXo',
+      content: 'https://skuprum.ru/og.png',
     },
   ],
   links: [],

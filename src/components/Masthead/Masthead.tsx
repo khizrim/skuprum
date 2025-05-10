@@ -134,6 +134,7 @@ export const Masthead = component$(() => {
               </span>
               <input
                 type="text"
+                name="weight"
                 aria-label="Вес металла"
                 inputMode="numeric"
                 class="absolute inset-0 w-full h-full px-4 py-2
@@ -160,6 +161,7 @@ export const Masthead = component$(() => {
                 {selectedMetal.value}
               </span>
               <select
+                name="type"
                 aria-label="Вид металла"
                 class="absolute inset-0 w-full h-full text-base font-normal
                        opacity-0 cursor-pointer"

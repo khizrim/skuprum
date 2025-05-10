@@ -13,6 +13,12 @@ export const YandexReviews = component$(() => {
           class="w-full h-[600px] md:h-[800px] rounded-2xl shadow-lg border-none"
           src="https://yandex.ru/maps-reviews-widget/192246959819?comments"
           title="Отзывы на Яндекс.Картах"
+          loading="lazy"
+          referrerPolicy={'no-referrer'}
+          data-cookiescript="accepted"
+          data-cookiecategory="strict"
+          sandbox="allow-scripts"
+          seamless
         />
       </div>
 

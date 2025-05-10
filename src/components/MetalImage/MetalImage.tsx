@@ -29,6 +29,7 @@ export const MetalImage = component$(({ src, alt }: { src: string; alt: string }
         src={currentSrc.value}
         alt={alt}
         class="absolute inset-0 w-full h-full object-contain opacity-100"
+        loading="lazy"
       />
       {previousSrc.value && (
         <img
@@ -37,6 +38,7 @@ export const MetalImage = component$(({ src, alt }: { src: string; alt: string }
           class={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
             fadeOut.value ? 'opacity-0' : 'opacity-100'
           }`}
+          loading="lazy"
         />
       )}
     </>
