@@ -5,7 +5,7 @@ export const Main = component$(() => {
   return (
     <Level
       as="main"
-      class="grow gap-12 sm:gap-32 px-4 py-8 mb-24 sm:px-6 lg:px-12 max-w-6xl w-full mx-auto justify-start"
+      class="grow gap-16 sm:gap-32 px-8 sm:py-8 mb-24 sm:px-8 lg:px-12 max-w-6xl w-full mx-auto justify-start"
     >
       <Slot />
     </Level>

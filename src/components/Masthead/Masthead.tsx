@@ -3,7 +3,7 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level/Level';
 import { metalOptions } from '~/utils/constants';
-import { MetalImage } from '~/components/MetalImage';
+import { MetalImage } from '~/components/MetalImage/MetalImage';
 import typo from 'ru-typo';
 import { calculateTotal } from '~/utils/calc-total';
 import { CTAButtons } from '~/components/CTAButtons';
@@ -116,7 +116,13 @@ export const Masthead = component$(() => {
       </h1>
 
       <div class="flex flex-col lg:flex-row items-center lg:items-start">
-        {/* Левая колонка */}
+        <div class="flex relative sm:hidden sm:absolute top-0 right-0 lg:transform lg:-translate-y-20 lg:translate-x-1/3 w-full aspect-square lg:w-2/3 lg:block">
+          <MetalImage
+            src={metalOptions.find((m) => m.label === selectedMetal.value)?.image || ''}
+            alt={selectedMetal.value}
+          />
+        </div>
+
         <div class="w-full lg:w-3/5">
           <div
             class="flex flex-wrap items-center gap-x-4 gap-y-6
@@ -161,8 +167,8 @@ export const Masthead = component$(() => {
                 {selectedMetal.value}
               </span>
               <select
-                name="type"
                 aria-label="Вид металла"
+                name="type"
                 class="absolute inset-0 w-full h-full text-base font-normal
                        opacity-0 cursor-pointer"
                 bind:value={selectedMetal}
@@ -196,14 +202,6 @@ export const Masthead = component$(() => {
               'Расчёт приблизительный и не является публичной офертой. Точный расчет возможен только после оценки',
             )}
           </p>
-        </div>
-
-        {/* Правая иллюстрация */}
-        <div class="hidden absolute top-0 right-0 transform -translate-y-20 translate-x-1/3 w-full aspect-square lg:w-2/3 lg:block">
-          <MetalImage
-            src={metalOptions.find((m) => m.label === selectedMetal.value)?.image || ''}
-            alt={selectedMetal.value}
-          />
         </div>
       </div>
     </Level>
