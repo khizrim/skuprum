@@ -83,7 +83,15 @@ export const head: DocumentHead = {
     },
     {
       httpEquiv: 'Content-Security-Policy',
-      content: "default-src 'self'; connect-src 'self' https://mc.yandex.ru;",
+      content: `
+        default-src 'self';
+        script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net;
+        connect-src 'self' https://mc.yandex.ru https://mc.yandex.com;
+        img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com;
+        frame-src https://yandex.ru;
+      `
+        .replace(/\s+/g, ' ')
+        .trim(),
     },
   ],
   links: [],
