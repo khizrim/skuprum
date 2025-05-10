@@ -81,6 +81,10 @@ export const head: DocumentHead = {
       name: 'twitter:image',
       content: 'https://skuprum.ru/og.png',
     },
+    {
+      httpEquiv: 'Content-Security-Policy',
+      content: "default-src 'self'; connect-src 'self' https://mc.yandex.ru;",
+    },
   ],
   links: [],
   scripts: [
