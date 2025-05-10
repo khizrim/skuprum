@@ -2,9 +2,37 @@ import { component$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level';
 import typo from 'ru-typo';
 import { CTAButtons } from '~/components/CTAButtons';
-import { steps } from '~/components/HowWeWork/HowWeWork.constants';
 
 export const HowWeWork = component$(() => {
+  const steps = [
+    {
+      icon: '💬',
+      title: 'Согласуем цену',
+      desc: 'Присылаете фото или описание — мы фиксируем цену заранее.',
+    },
+    {
+      icon: '🚚️',
+      title: 'Привозите или вызываете',
+      desc: 'Можно привезти металл на точку или заказать вывоз от 50 кг.',
+    },
+    {
+      icon: '⚖️',
+      title: 'Взвешиваем на месте',
+      desc: 'Электронные весы. Вес подтверждаем вместе с вами.',
+    },
+    {
+      icon: '💸',
+      title: 'Оплата сразу',
+      desc: 'Наличными или переводом. Без задержек и удержаний.',
+    },
+    {
+      icon: '📑',
+      title: 'Документы по запросу',
+      desc: 'Акт, накладная, договор — всё официально и прозрачно.',
+    },
+  ];
+
+  // Контакты для CTA
   const phoneHref = 'tel:+79199947355';
   const whatsappText = encodeURIComponent(
     'Здравствуйте! Я хочу сдать кабель. Можете, пожалуйста, рассчитать стоимость?',
@@ -18,27 +46,32 @@ export const HowWeWork = component$(() => {
         Как проходит приём кабеля
       </h2>
 
-      <div class="flex flex-wrap justify-center items-center gap-8">
+      {/* Используем flex-wrap для гармоничного ряда карточек */}
+      <div class="flex flex-wrap justify-center gap-8">
         {steps.map((step, index) => (
           <div
             key={index}
             class="relative bg-blue-50 rounded-2xl p-6 pt-12 flex flex-col items-start gap-4 text-left w-64"
           >
+            {/* Номер шага */}
             <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span class="w-10 h-10 flex items-center justify-center bg-white rounded-full text-blue-600 font-bold">
                 {String(index + 1).padStart(2, '0')}
               </span>
             </div>
 
+            {/* Иконка шага */}
             <div class="text-4xl mb-2">{step.icon}</div>
 
+            {/* Заголовок шага */}
             <h3 class="text-xl font-semibold mb-1">{typo(step.title, { header: true })}</h3>
 
+            {/* Описание шага */}
             <p class="text-base text-gray-600">{typo(step.desc, { digits: true })}</p>
           </div>
         ))}
 
-        <CTAButtons centered phoneHref={phoneHref} whatsappHref={whatsappHref} />
+        <CTAButtons phoneHref={phoneHref} whatsappHref={whatsappHref} />
       </div>
     </Level>
   );
