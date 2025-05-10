@@ -3,7 +3,7 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level/Level';
 import { metalOptions } from '~/utils/constants';
-import { MetalImage } from '~/components/deprecated/MetalImage/MetalImage';
+import { MetalImage } from '~/components/MetalImage';
 import typo from 'ru-typo';
 import { calculateTotal } from '~/utils/calc-total';
 import { CTAButtons } from '~/components/CTAButtons';
