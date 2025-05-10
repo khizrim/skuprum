@@ -186,7 +186,7 @@ export const Masthead = component$(() => {
 
             {/* Итоговая цена */}
             <span>
-              от <span class="text-red-500">{total.value.toLocaleString('ru-RU')}</span> ₽
+              до <span class="text-red-500">{total.value.toLocaleString('ru-RU')}</span> ₽
             </span>
           </div>
 
