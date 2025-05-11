@@ -1,24 +1,16 @@
 import type { RequestHandler } from '@builder.io/qwik-city';
-import { routes } from '@qwik-city-plan';
-import { createSitemap } from './create-sitemap';
 
-export const onGet: RequestHandler = (ev) => {
-  const siteRoutes = routes
-    .map(([route]) => route as string)
-    .filter((route) => route !== '/' && route !== '404.html' && route !== 'sitemap.xml');
+export const onGet: RequestHandler = ({ headers, send }) => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://skuprum.ru/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
 
-  const sitemap = createSitemap([
-    { loc: '/', priority: 1 },
-    ...siteRoutes.map((route) => ({
-      loc: route,
-      priority: 0.9,
-    })),
-  ]);
-
-  const response = new Response(sitemap, {
-    status: 200,
-    headers: { 'Content-Type': 'text/xml' },
-  });
-
-  ev.send(response);
+  headers.set('Content-Type', 'application/xml');
+  send(200, sitemap);
 };
