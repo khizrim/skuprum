@@ -26,7 +26,7 @@ export const YandexReviews = component$(() => {
         href="https://yandex.ru/maps/org/CvetMetLom/192246959819/"
         target="_blank"
         rel="noopener noreferrer"
-        class="block mt-6 text-sm text-gray-400 hover:text-gray-500 transition"
+        class="block mt-6 text-sm text-gray-600 hover:text-gray-800 transition"
       >
         Пункт приёма на карте Москвы — Яндекс.Карты
       </a>
