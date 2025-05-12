@@ -29,7 +29,6 @@ export const MetalImage = component$(({ src, alt }: { src: string; alt: string }
         src={currentSrc.value}
         alt={alt}
         class="absolute inset-0 w-full h-full object-contain opacity-100"
-        loading="lazy"
       />
       {previousSrc.value && (
         <img
