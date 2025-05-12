@@ -1,5 +1,3 @@
-// src/components/Masthead/Masthead.tsx
-
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level/Level';
 import { metalOptions } from '~/utils/constants';

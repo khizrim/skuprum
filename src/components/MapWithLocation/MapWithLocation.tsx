@@ -1,4 +1,3 @@
-// src/components/MapWithLocation/MapWithLocation.tsx
 import { component$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level';
 import typo from 'ru-typo';
