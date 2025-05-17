@@ -20,4 +20,7 @@ export const onRequest: RequestHandler = (event) => {
   ].join('; ');
 
   event.headers.set('Content-Security-Policy', csp);
+  event.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  event.headers.set('X-Frame-Options', 'SAMEORIGIN');
+  event.headers.set('X-Content-Type-Options', 'nosniff');
 };
