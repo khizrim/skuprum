@@ -38,9 +38,9 @@ export const HowWeWork = component$(() => {
             <p class="text-base text-gray-600 m-0">{typo(step.desc, { digits: true })}</p>
           </li>
         ))}
-
-        <CTAButtons centered phoneHref={phoneHref} whatsappHref={whatsappHref} />
       </ul>
+
+      <CTAButtons centered phoneHref={phoneHref} whatsappHref={whatsappHref} />
     </Level>
   );
 });
