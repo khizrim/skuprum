@@ -62,8 +62,6 @@ export const MetalImage = component$(({ metal }: MetalImageProps) => {
   useVisibleTask$(({ track }) => {
     track(() => metal);
 
-    console.log(metal);
-
     if (metal !== currentMetal.value) {
       previousMetal.value = currentMetal.value;
       currentMetal.value = metal;

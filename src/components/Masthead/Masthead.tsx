@@ -109,8 +109,7 @@ export const Masthead = component$(() => {
   return (
     <Level as="section" class="relative mx-auto w-full">
       <h1 class="absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0">
-        Прием металлолома в Москве и области — Цветной и черный металл, самовывоз и прием на точке
-        по выгодной цене за кг
+        Прием черного и цветного металла в Москве — самовывоз и выгодные цены
       </h1>
 
       <div class="flex flex-col lg:flex-row items-center lg:items-start">
