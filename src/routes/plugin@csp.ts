@@ -10,7 +10,7 @@ export const onRequest: RequestHandler = (event) => {
   const csp = [
     "default-src 'self'",
     `script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net 'nonce-${nonce}' 'strict-dynamic'`,
-    "connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yandex.ru",
+    "connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yandex.ru https://ymetrica1.com",
     "img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com",
     'frame-src https://yandex.ru https://yandex.ru/maps-reviews-widget https://*.yandex.ru',
     "object-src 'none'",
