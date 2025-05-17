@@ -94,11 +94,12 @@ export const head: DocumentHead = {
   ],
   scripts: [
     {
-      key: 'text/javascript',
+      key: 'yandex-metrika-deferred',
       props: {
         type: 'text/javascript',
       },
       script: `
+      document.addEventListener('DOMContentLoaded', function () {
         (function (m, e, t, r, i, k, a) {
           m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
           m[i].l = 1 * new Date();
@@ -107,16 +108,17 @@ export const head: DocumentHead = {
           }
           k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
         })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-        
+  
         ym(101890997, "init", {
           clickmap: true,
           trackLinks: true,
           accurateTrackBounce: true
         });
-      `,
+      });
+    `,
     },
     {
-      key: 'application/ld+json',
+      key: 'local-business',
       props: {
         type: 'application/ld+json',
       },
