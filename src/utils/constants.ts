@@ -4,6 +4,8 @@ type MetalProps = {
   image?: string;
 };
 
+export const WhatsappBaseUrl = `https://api.whatsapp.com/send/?phone=79199947355`;
+
 export const metalOptions: MetalProps[] = [
   { label: 'меди', price: 777, image: '/images/copper.webp' },
   { label: 'кабеля', price: 666, image: '/images/cables.webp' },

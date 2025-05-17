@@ -16,21 +16,21 @@ export const WhyChooseUs = component$(() => {
         {typo('Почему нас выбирают клиенты', { header: true })}
       </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 sm:gap-y-12">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 sm:gap-y-12 list-none p-0 m-0">
         {chooseItems.map((item) => (
-          <div
+          <li
             class="flex flex-col items-start gap-2 sm:gap-6 py-6 bg-white rounded-2xl"
             key={item.title}
           >
             <div class="text-4xl sm:text-5xl">{item.icon}</div>
-            <h3 class="text-xl sm:text-2xl font-semibold">{typo(item.title)}</h3>
+            <p class="text-xl sm:text-2xl font-semibold m-0">{typo(item.title)}</p>
             <p
-              class="text-base sm:text-lg text-gray-500"
+              class="text-base sm:text-lg text-gray-500 m-0"
               dangerouslySetInnerHTML={typo(item.description)}
             />
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Level>
   );
 });

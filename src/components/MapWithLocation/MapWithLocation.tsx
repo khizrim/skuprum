@@ -28,18 +28,16 @@ export const MapWithLocation = component$(() => {
         {typo('Наши пункты приёма')}
       </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-12 list-none p-0 m-0">
         {locations.map((loc, idx) => (
-          <div key={idx} class="flex flex-col bg-white rounded-2xl shadow-lg p-6 gap-6">
+          <li key={idx} class="flex flex-col bg-white rounded-2xl shadow-lg p-6 gap-6">
             <div class="flex items-start gap-4">
               <span class="text-2xl mt-1">📍</span>
               <div>
-                <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">
-                  {typo(loc.label, { header: true })}
-                </h3>
+                <p class="text-xl sm:text-2xl font-semibold text-gray-900 m-0">{typo(loc.label)}</p>
                 <div class="flex items-center gap-2 mt-1">
                   <span class="text-lg text-gray-500">🚇</span>
-                  <p class="text-base text-gray-600">{typo(loc.metro)}</p>
+                  <p class="text-base text-gray-600 m-0">{typo(loc.metro)}</p>
                 </div>
               </div>
             </div>
@@ -51,9 +49,9 @@ export const MapWithLocation = component$(() => {
             >
               {typo('Построить маршрут')}
             </a>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Level>
   );
 });

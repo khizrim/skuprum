@@ -1,6 +1,6 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Level } from '~/components/Level/Level';
-import { metalOptions } from '~/utils/constants';
+import { metalOptions, WhatsappBaseUrl } from '~/utils/constants';
 import { MetalImage } from '~/components/MetalImage/MetalImage';
 import typo from 'ru-typo';
 import { calculateTotal } from '~/utils/calc-total';
@@ -60,7 +60,7 @@ export const Masthead = component$(() => {
         ? `Здравствуйте! Хочу сдать ${weight.value} кг ${selectedMetal.value.toLowerCase()}. Можете рассчитать стоимость?`
         : defaultText;
 
-    whatsappHref.value = `https://wa.me/79199947355?text=${encodeURIComponent(customText)}`;
+    whatsappHref.value = `${WhatsappBaseUrl}&text=${encodeURIComponent(customText)}&type=phone_number&app_absent=0`;
   });
 
   // 4. Авто-обновление каждые 8 секунд

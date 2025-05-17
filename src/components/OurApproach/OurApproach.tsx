@@ -8,11 +8,11 @@ export const OurApproach = component$(() => {
         <div class="absolute top-[-30px] left-[-20px] text-[100px] text-blue-600 opacity-10 select-none leading-none">
           “
         </div>
-        <h2 class="text-3xl font-bold mb-6 text-center">
+        <p class="text-3xl font-bold mb-6 text-center">
           {typo('Мы работаем по-честному. Не на словах — на деле.', {
             header: true,
           })}
-        </h2>
+        </p>
 
         <p class="text-xl leading-relaxed text-center max-w-3xl mx-auto text-gray-800">
           {typo(
