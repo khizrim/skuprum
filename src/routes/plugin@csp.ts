@@ -6,10 +6,9 @@ export const onRequest: RequestHandler = (event) => {
 
   const nonce = Date.now().toString(36);
   event.sharedMap.set('@nonce', nonce);
-
   const csp = [
     "default-src 'self'",
-    `script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net 'nonce-${nonce}' 'strict-dynamic'`,
+    `script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net 'nonce-${nonce}' 'unsafe-inline' 'strict-dynamic'`,
     "connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yandex.ru https://ymetrica1.com",
     "img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com",
     'frame-src https://yandex.ru https://yandex.ru/maps-reviews-widget https://*.yandex.ru',
