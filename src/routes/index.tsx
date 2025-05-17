@@ -82,18 +82,6 @@ export const head: DocumentHead = {
       content: 'https://skuprum.ru/og.png',
     },
     {
-      httpEquiv: 'Content-Security-Policy',
-      content: `
-          default-src 'self';
-          script-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yastatic.net;
-          connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://yandex.ru;
-          img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com;
-          frame-src https://yandex.ru https://yandex.ru/maps-reviews-widget https://*.yandex.ru;
-        `
-        .replace(/\s+/g, ' ')
-        .trim(),
-    },
-    {
       name: 'theme-color',
       content: '#fff',
     },

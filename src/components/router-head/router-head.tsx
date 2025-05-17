@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useServerData } from '@builder.io/qwik';
 import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 
 /**
@@ -7,6 +7,7 @@ import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
+  const nonce = useServerData<string | undefined>('nonce');
 
   return (
     <>
@@ -38,6 +39,7 @@ export const RouterHead = component$(() => {
       {head.scripts.map((s) => (
         <script
           key={s.key}
+          nonce={nonce}
           {...s.props}
           {...(s.props?.dangerouslySetInnerHTML ? {} : { dangerouslySetInnerHTML: s.script })}
         />
