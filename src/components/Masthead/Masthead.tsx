@@ -116,8 +116,7 @@ export const Masthead = component$(() => {
       <div class="flex flex-col lg:flex-row items-center lg:items-start">
         <div class="flex relative sm:hidden sm:absolute top-0 right-0 lg:transform lg:-translate-y-20 lg:translate-x-1/3 w-full aspect-square lg:w-2/3 lg:block">
           <MetalImage
-            src={metalOptions.find((m) => m.label === selectedMetal.value)?.image || ''}
-            alt={selectedMetal.value}
+            metal={metalOptions.find((m) => m.label === selectedMetal.value)?.name || 'copper'}
           />
         </div>
 
