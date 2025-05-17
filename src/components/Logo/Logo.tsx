@@ -13,8 +13,7 @@ export const Logo = component$<LogoProps>(({ size = 'lg' }: LogoProps) => {
       title="Вернуться на главную"
       lang="ru"
     >
-      <span class="sr-only">Скупрум</span>
-      <span aria-hidden="true">skuprum</span>
+      <span>skuprum</span>
     </a>
   );
 });
