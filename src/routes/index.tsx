@@ -23,17 +23,17 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: 'Приём металлолома в Москве — дорого и быстро',
+  title: 'Скупрум — приём металлолома в Москве дорого и быстро',
   meta: [
     {
       name: 'description',
       content:
-        'Приём меди, кабеля и цветного металла в Москве. Высокие цены, точное взвешивание, выезд и моментальная оплата.',
+        'Скупрум — приём меди, кабеля и цветного металла в Москве. Высокие цены, точное взвешивание, выезд и моментальная оплата.',
     },
     {
       name: 'keywords',
       content:
-        'прием металла в Москве, сдать металлолом, сдать медь дорого, скупка кабеля, прием меди и латуни, цена на металлолом, вывоз металлолома, сдать кабель с выездом, скупка меди, цветной металл Москва, где сдать медь, пункты приема металла, прием цветного металла, скупка алюминия, прием черного металла, сколько стоит медь за кг, прием лома, металлолом с выездом и оплатой, прием металла цена за кг, утилизация кабеля',
+        'скуprum, скупрум, прием металла в Москве, сдать металлолом, сдать медь дорого, скупка кабеля, прием меди и латуни, цена на металлолом, вывоз металлолома, сдать кабель с выездом, скупка меди, цветной металл Москва, где сдать медь, пункты приема металла, прием цветного металла, скупка алюминия, прием черного металла, сколько стоит медь за кг, прием лома, металлолом с выездом и оплатой, прием металла цена за кг, утилизация кабеля',
     },
     {
       name: 'robots',
@@ -45,12 +45,12 @@ export const head: DocumentHead = {
     },
     {
       property: 'og:title',
-      content: 'Приём металлолома в Москве — дорого и быстро',
+      content: 'Скупрум — приём металлолома в Москве дорого и быстро',
     },
     {
       property: 'og:description',
       content:
-        'Сдайте медь, кабель, цветной металл по максимальной цене с вывозом в день обращения и моментальной оплатой.',
+        'Скупрум — сдайте медь, кабель, цветной металл по максимальной цене с вывозом и оплатой в день обращения.',
     },
     {
       property: 'og:type',
@@ -70,12 +70,12 @@ export const head: DocumentHead = {
     },
     {
       name: 'twitter:title',
-      content: 'Приём металлолома в Москве — выгодно, быстро, честно',
+      content: 'Скупрум — приём металлолома в Москве выгодно и честно',
     },
     {
       name: 'twitter:description',
       content:
-        'Прием меди, кабеля и других металлов по высоким ценам. Оставьте заявку — приедем в день обращения!',
+        'Скупрум — приём меди, кабеля и других металлов по высоким ценам. Оставьте заявку — приедем в день обращения!',
     },
     {
       name: 'twitter:image',
@@ -91,6 +91,10 @@ export const head: DocumentHead = {
       rel: 'preconnect',
       href: 'https://mc.yandex.ru',
     },
+    {
+      rel: 'preconnect',
+      href: 'https://yastatic.net',
+    },
   ],
   scripts: [
     {
@@ -99,23 +103,23 @@ export const head: DocumentHead = {
         type: 'text/javascript',
       },
       script: `
-      document.addEventListener('DOMContentLoaded', function () {
-        (function (m, e, t, r, i, k, a) {
-          m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-          m[i].l = 1 * new Date();
-          for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) return;
-          }
-          k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-  
-        ym(101890997, "init", {
-          clickmap: true,
-          trackLinks: true,
-          accurateTrackBounce: true
+        document.addEventListener('DOMContentLoaded', function () {
+          (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) return;
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+          })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+          ym(101890997, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+          });
         });
-      });
-    `,
+      `,
     },
     {
       key: 'local-business',
@@ -125,7 +129,7 @@ export const head: DocumentHead = {
       script: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'Приём металла — Skuprum',
+        name: 'Скупрум — приём металла',
         image: 'https://skuprum.ru',
         url: 'https://skuprum.ru',
         telephone: '8 (499) 390-79-15',
