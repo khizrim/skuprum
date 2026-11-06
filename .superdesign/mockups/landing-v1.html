@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скупрум — приём металла в Москве</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  :root{--bg:#F7F5F2;--surface:#fff;--subtle:#EFECE7;--ink:#14161A;--ink2:#4A4F57;--muted:#8A9099;--line:#E2DED7;--graphite:#121417;--cu:#C8662B;--cu-h:#A9521F;--cu-t:#F6E7DC;--wa:#1FA855;}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Onest',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums}
+  .display{letter-spacing:-0.035em;line-height:1}
+  .h2{letter-spacing:-0.025em;line-height:1.05}
+  .chip{border-bottom:3px dashed var(--cu);color:var(--cu);padding:0 .08em;cursor:pointer;transition:background .2s ease-out}
+  .chip:hover{background:var(--cu-t)}
+  .btn-cu{background:var(--cu);color:#fff;transition:background .2s ease-out}
+  .btn-cu:hover{background:var(--cu-h)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:20px}
+  .grain{background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:18px 18px}
+  input,select{outline:none}
+  input:focus,select:focus{box-shadow:0 0 0 3px var(--cu-t);border-color:var(--cu)}
+</style>
+</head>
+<body>
+<div id="root" class="min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-[#F7F5F2]/90 backdrop-blur border-b border-[#E2DED7]">
+    <div class="max-w-[1200px] mx-auto px-6 h-[72px] flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <a id="logo-home" href="#top" class="text-[28px] font-extrabold tracking-[-0.04em] text-[#14161A]">skuprum</a>
+        <nav class="hidden lg:flex items-center gap-7 text-[15px] text-[#4A4F57]">
+          <a id="nav-prices" href="#prices" class="hover:text-[#14161A]">Цены</a>
+          <a id="nav-how" href="#how" class="hover:text-[#14161A]">Как работаем</a>
+          <a id="nav-reviews" href="#reviews" class="hover:text-[#14161A]">Отзывы</a>
+          <a id="nav-contacts" href="#contacts" class="hover:text-[#14161A]">Адреса</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="hidden md:flex items-center gap-2 text-[14px] text-[#4A4F57]">
+          <span class="w-2 h-2 rounded-full bg-[#2E8B57]"></span> Открыто · ежедневно 08–23
+        </div>
+        <a id="header-phone" href="tel:+74993907915" class="hidden sm:block text-[17px] font-semibold num">8 (499) 390-79-15</a>
+        <a id="header-call" href="tel:+74993907915" class="btn-cu h-11 px-5 rounded-full flex items-center gap-2 text-[15px] font-semibold">
+          <iconify-icon icon="lucide:phone" width="18"></iconify-icon> Позвонить
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="max-w-[1200px] mx-auto px-6 pt-20 pb-24 grid lg:grid-cols-[1.25fr_1fr] gap-14 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 h-9 px-4 rounded-full bg-white border border-[#E2DED7] text-[14px] text-[#4A4F57] mb-8">
+        <iconify-icon icon="lucide:trending-up" width="16" class="text-[#C8662B]"></iconify-icon>
+        Цены обновлены сегодня, 6 ноября
+      </div>
+      <h1 class="display text-[56px] lg:text-[84px] font-extrabold">
+        Сдайте <span class="chip num">5 кг</span><br>
+        <span class="chip">меди</span> и получите<br>
+        <span class="text-[#C8662B] num">4 995 ₽</span>
+      </h1>
+      <p class="mt-8 text-[19px] leading-[1.55] text-[#4A4F57] max-w-[520px]">
+        Приём меди, кабеля и цветного металла в Москве. Взвешиваем при вас, платим за 5 минут, вывозим от 50 кг в день заявки.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a id="hero-call" href="tel:+74993907915" class="btn-cu h-14 px-8 rounded-full flex items-center gap-3 text-[17px] font-semibold shadow-[0_8px_24px_rgba(200,102,43,0.25)]">
+          <iconify-icon icon="lucide:phone" width="20"></iconify-icon> Позвонить
+        </a>
+        <a id="hero-whatsapp" href="https://wa.me/79199947355" class="h-14 px-7 rounded-full flex items-center gap-3 text-[17px] font-semibold bg-white border border-[#E2DED7] hover:border-[#14161A] transition">
+          <iconify-icon icon="logos:whatsapp-icon" width="20"></iconify-icon> Написать в WhatsApp
+        </a>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[15px] text-[#4A4F57]">
+        <div class="flex items-center gap-2"><iconify-icon icon="mdi:star" width="18" class="text-[#F5A524]"></iconify-icon><b class="text-[#14161A] num">4,7</b> на Яндекс Картах · 25 отзывов</div>
+        <div class="flex items-center gap-2"><iconify-icon icon="lucide:wallet" width="18" class="text-[#C8662B]"></iconify-icon>Оплата за 5 минут</div>
+        <div class="flex items-center gap-2"><iconify-icon icon="lucide:truck" width="18" class="text-[#C8662B]"></iconify-icon>Вывоз в день заявки</div>
+      </div>
+    </div>
+
+    <!-- Calculator card -->
+    <div class="card p-8 shadow-[0_8px_24px_rgba(20,22,26,0.06)]">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-[22px] font-semibold">Калькулятор</h2>
+        <span class="text-[13px] text-[#8A9099]">цена за кг</span>
+      </div>
+      <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Металл</label>
+      <div class="grid grid-cols-3 gap-2 mb-6">
+        <button class="h-12 rounded-xl border-2 border-[#C8662B] bg-[#F6E7DC] text-[15px] font-semibold">Медь</button>
+        <button class="h-12 rounded-xl border border-[#E2DED7] text-[15px] hover:border-[#14161A]">Кабель</button>
+        <button class="h-12 rounded-xl border border-[#E2DED7] text-[15px] hover:border-[#14161A]">Латунь</button>
+        <button class="h-12 rounded-xl border border-[#E2DED7] text-[15px] hover:border-[#14161A]">Алюминий</button>
+        <button class="h-12 rounded-xl border border-[#E2DED7] text-[15px] hover:border-[#14161A]">Свинец</button>
+        <button class="h-12 rounded-xl border border-[#E2DED7] text-[15px] text-[#4A4F57] hover:border-[#14161A]">Ещё 17</button>
+      </div>
+      <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Вес, кг</label>
+      <div class="flex items-center gap-3 mb-6">
+        <button class="w-14 h-14 rounded-xl border border-[#E2DED7] flex items-center justify-center"><iconify-icon icon="lucide:minus" width="20"></iconify-icon></button>
+        <input value="5" class="flex-1 h-14 rounded-xl border border-[#E2DED7] text-center text-[22px] font-semibold num">
+        <button class="w-14 h-14 rounded-xl border border-[#E2DED7] flex items-center justify-center"><iconify-icon icon="lucide:plus" width="20"></iconify-icon></button>
+      </div>
+      <div class="rounded-2xl bg-[#121417] text-[#F7F5F2] p-6 flex items-end justify-between">
+        <div>
+          <div class="text-[14px] text-[#8A9099]">Вы получите до</div>
+          <div class="text-[44px] font-extrabold num tracking-[-0.03em] leading-none mt-2">4 995 ₽</div>
+        </div>
+        <div class="text-right text-[14px] text-[#8A9099] num">999 ₽ × 5 кг</div>
+      </div>
+      <p class="mt-4 text-[13px] text-[#8A9099] leading-[1.5]">Точную цену назовём по фото: зависит от чистоты и сорта металла.</p>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="bg-[#121417] text-[#F7F5F2] grain">
+    <div class="max-w-[1200px] mx-auto px-6 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10">
+      <div><div class="text-[44px] font-extrabold num tracking-[-0.03em] text-[#E08A52]">до 999 ₽</div><div class="mt-2 text-[15px] text-[#B8BCC2]">за килограмм меди</div></div>
+      <div><div class="text-[44px] font-extrabold num tracking-[-0.03em]">5 минут</div><div class="mt-2 text-[15px] text-[#B8BCC2]">от взвешивания до оплаты</div></div>
+      <div><div class="text-[44px] font-extrabold num tracking-[-0.03em]">от 50 кг</div><div class="mt-2 text-[15px] text-[#B8BCC2]">бесплатный вывоз цветмета</div></div>
+      <div><div class="text-[44px] font-extrabold num tracking-[-0.03em]">2 пункта</div><div class="mt-2 text-[15px] text-[#B8BCC2]">на севере и юго-востоке Москвы</div></div>
+    </div>
+  </section>
+
+  <!-- Prices -->
+  <section id="prices" class="max-w-[1200px] mx-auto px-6 py-28">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div>
+        <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C8662B] mb-4">Цены на сегодня</div>
+        <h2 class="h2 text-[48px] font-bold max-w-[640px]">Принимаем 22 вида металла — от меди до тантала</h2>
+      </div>
+      <div class="flex gap-1 p-1 rounded-full bg-[#EFECE7] text-[15px] font-medium">
+        <button class="h-10 px-5 rounded-full bg-white shadow-sm">Цветные</button>
+        <button class="h-10 px-5 rounded-full text-[#4A4F57]">Чёрные</button>
+        <button class="h-10 px-5 rounded-full text-[#4A4F57]">Редкие</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-copper/copper.webp" alt="Медь" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Медь</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">999 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-cables/cables.webp" alt="Кабель" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Кабель</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">888 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-bronze/bronze.webp" alt="Бронза" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Бронза</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">777 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-brass/brass.webp" alt="Латунь" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Латунь</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">666 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-aluminium/aluminium.webp" alt="Алюминий" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Алюминий</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">222 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-lead/lead.webp" alt="Свинец" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Свинец</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">111 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-can/can.webp" alt="Алюминиевая банка" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Банка</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">88,8 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+      <div class="card p-3 group">
+        <div class="aspect-[4/3] rounded-[14px] bg-[#EFECE7] overflow-hidden"><img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/299c7b38-cf8e-440e-bdf1-847a0b8b12b4/content-assets/metal-stainless/stainless.webp" alt="Нержавейка" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"></div>
+        <div class="px-2 pt-4 pb-2 flex items-end justify-between"><div class="text-[18px] font-semibold">Нержавейка</div><div class="text-right"><div class="text-[22px] font-bold num text-[#C8662B]">55,5 ₽</div><div class="text-[12px] text-[#8A9099]">за кг</div></div></div>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-[20px] border border-dashed border-[#C8B9A8] px-6 py-5">
+      <div class="text-[16px] text-[#4A4F57]">Ещё 14 металлов: титан, олово, ПОС, быстрорез, нихром, тантал, молибден, ВК/ТК, ниобий, кобальт, висмут, баббит…</div>
+      <a id="prices-all" href="#all-prices" class="h-11 px-5 rounded-full border border-[#14161A] flex items-center gap-2 text-[15px] font-semibold">Весь прайс <iconify-icon icon="lucide:arrow-right" width="18"></iconify-icon></a>
+    </div>
+  </section>
+
+  <!-- Lead form -->
+  <section id="lead" class="max-w-[1200px] mx-auto px-6">
+    <div class="rounded-[28px] bg-[#121417] text-[#F7F5F2] grain overflow-hidden grid lg:grid-cols-2">
+      <div class="p-14">
+        <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#E08A52] mb-4">Оценка по фото</div>
+        <h2 class="h2 text-[44px] font-bold">Пришлите фото — назовём точную цену</h2>
+        <p class="mt-6 text-[18px] leading-[1.55] text-[#B8BCC2] max-w-[440px]">Цену фиксируем заранее. На месте она не изменится, если металл совпадает с фото.</p>
+        <ul class="mt-10 space-y-4 text-[16px]">
+          <li class="flex items-center gap-3"><iconify-icon icon="lucide:check-circle-2" width="22" class="text-[#E08A52]"></iconify-icon>Цену фиксируем до приезда</li>
+          <li class="flex items-center gap-3"><iconify-icon icon="lucide:check-circle-2" width="22" class="text-[#E08A52]"></iconify-icon>Вывоз в день заявки — от 50 кг цветмета</li>
+          <li class="flex items-center gap-3"><iconify-icon icon="lucide:check-circle-2" width="22" class="text-[#E08A52]"></iconify-icon>Работаем с физлицами и компаниями</li>
+        </ul>
+      </div>
+      <div class="bg-white text-[#14161A] m-3 rounded-[22px] p-10">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2">
+            <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Телефон</label>
+            <input placeholder="+7 (___) ___-__-__" class="w-full h-14 rounded-xl border border-[#E2DED7] px-4 text-[17px]">
+          </div>
+          <div>
+            <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Металл</label>
+            <div class="h-14 rounded-xl border border-[#E2DED7] px-4 flex items-center justify-between text-[17px]">Медь <iconify-icon icon="lucide:chevron-down" width="18" class="text-[#8A9099]"></iconify-icon></div>
+          </div>
+          <div>
+            <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Примерный вес</label>
+            <input placeholder="например, 120 кг" class="w-full h-14 rounded-xl border border-[#E2DED7] px-4 text-[17px]">
+          </div>
+          <div class="col-span-2">
+            <label class="block text-[14px] font-medium text-[#4A4F57] mb-2">Фото металла <span class="text-[#8A9099] font-normal">— необязательно</span></label>
+            <div class="h-28 rounded-xl border-2 border-dashed border-[#E2DED7] flex flex-col items-center justify-center gap-2 text-[15px] text-[#4A4F57] hover:border-[#C8662B] transition">
+              <iconify-icon icon="lucide:camera" width="24" class="text-[#C8662B]"></iconify-icon>
+              Перетащите или выберите фото
+            </div>
+          </div>
+          <div class="col-span-2 flex items-center gap-3 text-[14px] text-[#4A4F57]">
+            <div class="w-12 h-7 rounded-full bg-[#C8662B] relative"><span class="absolute right-1 top-1 w-5 h-5 rounded-full bg-white"></span></div>
+            Нужен вывоз с адреса
+          </div>
+        </div>
+        <button class="btn-cu mt-8 w-full h-14 rounded-full text-[17px] font-semibold flex items-center justify-center gap-2">Получить цену <iconify-icon icon="lucide:arrow-right" width="20"></iconify-icon></button>
+        <p class="mt-4 text-[13px] text-[#8A9099] text-center">Нажимая кнопку, вы соглашаетесь на обработку телефона для обратной связи</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="max-w-[1200px] mx-auto px-6 py-28">
+    <div class="grid lg:grid-cols-[1fr_2fr] gap-14">
+      <div>
+        <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C8662B] mb-4">Почему Скупрум</div>
+        <h2 class="h2 text-[48px] font-bold">Честный вес и деньги сразу</h2>
+        <p class="mt-6 text-[18px] leading-[1.55] text-[#4A4F57]">Не занижаем вес, не прячем удержания. Приезжаем, взвешиваем, платим — так и зарабатываем.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#F6E7DC] flex items-center justify-center mb-6"><iconify-icon icon="lucide:badge-russian-ruble" width="24" class="text-[#C8662B]"></iconify-icon></div>
+          <h3 class="text-[22px] font-semibold">Максимальные цены</h3>
+          <p class="mt-3 text-[16px] leading-[1.55] text-[#4A4F57]">До <b class="text-[#14161A]">999 ₽</b> за кг меди — честно, без скрытых удержаний.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#F6E7DC] flex items-center justify-center mb-6"><iconify-icon icon="lucide:truck" width="24" class="text-[#C8662B]"></iconify-icon></div>
+          <h3 class="text-[22px] font-semibold">Быстрый вывоз</h3>
+          <p class="mt-3 text-[16px] leading-[1.55] text-[#4A4F57]">Цветмет <b class="text-[#14161A]">от 50 кг</b> и чермет <b class="text-[#14161A]">от 500 кг</b> — в день заявки.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#F6E7DC] flex items-center justify-center mb-6"><iconify-icon icon="lucide:scale" width="24" class="text-[#C8662B]"></iconify-icon></div>
+          <h3 class="text-[22px] font-semibold">Честное взвешивание</h3>
+          <p class="mt-3 text-[16px] leading-[1.55] text-[#4A4F57]">Электронные весы. Видеофиксация по запросу.</p>
+        </div>
+        <div class="card p-8">
+          <div class="w-12 h-12 rounded-xl bg-[#F6E7DC] flex items-center justify-center mb-6"><iconify-icon icon="lucide:banknote" width="24" class="text-[#C8662B]"></iconify-icon></div>
+          <h3 class="text-[22px] font-semibold">Оплата сразу</h3>
+          <p class="mt-3 text-[16px] leading-[1.55] text-[#4A4F57]">Наличными или переводом через 5 минут после приёма.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="bg-white border-y border-[#E2DED7]">
+    <div class="max-w-[1200px] mx-auto px-6 py-28">
+      <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C8662B] mb-4">Как это работает</div>
+      <h2 class="h2 text-[48px] font-bold max-w-[640px]">Пять шагов от звонка до денег</h2>
+      <div class="mt-16 grid lg:grid-cols-5 gap-6 relative">
+        <div class="hidden lg:block absolute top-6 left-6 right-6 h-px bg-[#E2DED7]"></div>
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-[#C8662B] text-white flex items-center justify-center text-[18px] font-bold num">1</div>
+          <h3 class="mt-6 text-[20px] font-semibold">Согласуем цену</h3>
+          <p class="mt-2 text-[15px] leading-[1.55] text-[#4A4F57]">Пришлите фото или описание — фиксируем цену заранее.</p>
+        </div>
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-[#14161A] text-white flex items-center justify-center text-[18px] font-bold num">2</div>
+          <h3 class="mt-6 text-[20px] font-semibold">Привозите или вызываете</h3>
+          <p class="mt-2 text-[15px] leading-[1.55] text-[#4A4F57]">Сами на пункт или наш вывоз от 50 кг.</p>
+        </div>
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-[#14161A] text-white flex items-center justify-center text-[18px] font-bold num">3</div>
+          <h3 class="mt-6 text-[20px] font-semibold">Взвешиваем при вас</h3>
+          <p class="mt-2 text-[15px] leading-[1.55] text-[#4A4F57]">Электронные весы. Вес подтверждаем вместе.</p>
+        </div>
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-[#14161A] text-white flex items-center justify-center text-[18px] font-bold num">4</div>
+          <h3 class="mt-6 text-[20px] font-semibold">Платим сразу</h3>
+          <p class="mt-2 text-[15px] leading-[1.55] text-[#4A4F57]">Наличными или переводом. Без задержек.</p>
+        </div>
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-[#14161A] text-white flex items-center justify-center text-[18px] font-bold num">5</div>
+          <h3 class="mt-6 text-[20px] font-semibold">Документы</h3>
+          <p class="mt-2 text-[15px] leading-[1.55] text-[#4A4F57]">Акт, накладная, договор — по запросу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="max-w-[1200px] mx-auto px-6 py-28">
+    <div class="flex flex-wrap items-end justify-between gap-8 mb-12">
+      <div>
+        <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C8662B] mb-4">Отзывы</div>
+        <h2 class="h2 text-[48px] font-bold">Что говорят клиенты</h2>
+      </div>
+      <div class="card px-7 py-5 flex items-center gap-5">
+        <div class="text-[48px] font-extrabold num leading-none">4,7</div>
+        <div>
+          <div class="flex text-[#F5A524]"><iconify-icon icon="mdi:star" width="20"></iconify-icon><iconify-icon icon="mdi:star" width="20"></iconify-icon><iconify-icon icon="mdi:star" width="20"></iconify-icon><iconify-icon icon="mdi:star" width="20"></iconify-icon><iconify-icon icon="mdi:star-half-full" width="20"></iconify-icon></div>
+          <div class="mt-1 text-[14px] text-[#4A4F57]">25 отзывов на Яндекс Картах</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card p-8">
+        <div class="flex text-[#F5A524] mb-5"><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon></div>
+        <p class="text-[17px] leading-[1.55]">[Текст реального отзыва с Яндекс Карт — подтянем из виджета]</p>
+        <div class="mt-6 text-[14px] text-[#8A9099]">Имя клиента · дата</div>
+      </div>
+      <div class="card p-8">
+        <div class="flex text-[#F5A524] mb-5"><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon></div>
+        <p class="text-[17px] leading-[1.55]">[Текст реального отзыва с Яндекс Карт — подтянем из виджета]</p>
+        <div class="mt-6 text-[14px] text-[#8A9099]">Имя клиента · дата</div>
+      </div>
+      <div class="card p-8">
+        <div class="flex text-[#F5A524] mb-5"><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon><iconify-icon icon="mdi:star" width="18"></iconify-icon></div>
+        <p class="text-[17px] leading-[1.55]">[Текст реального отзыва с Яндекс Карт — подтянем из виджета]</p>
+        <div class="mt-6 text-[14px] text-[#8A9099]">Имя клиента · дата</div>
+      </div>
+    </div>
+    <a id="reviews-yandex" href="https://yandex.ru/maps/org/CvetMetLom/192246959819/" class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold border-b border-[#14161A]">Все отзывы на Яндекс Картах <iconify-icon icon="lucide:arrow-up-right" width="16"></iconify-icon></a>
+  </section>
+
+  <!-- Locations -->
+  <section id="contacts" class="max-w-[1200px] mx-auto px-6 pb-28">
+    <div class="text-[14px] font-semibold uppercase tracking-[0.12em] text-[#C8662B] mb-4">Адреса</div>
+    <h2 class="h2 text-[48px] font-bold mb-12">Два пункта приёма в Москве</h2>
+    <div class="grid lg:grid-cols-[1fr_1.4fr] gap-5">
+      <div class="space-y-5">
+        <div class="card p-8 border-2 border-[#C8662B]">
+          <div class="flex items-center justify-between"><div class="text-[14px] text-[#8A9099]">Север Москвы</div><span class="text-[13px] font-medium text-[#2E8B57]">Открыто до 23:00</span></div>
+          <div class="mt-3 text-[22px] font-semibold">ул. Смольная, д. 2</div>
+          <a id="route-smolnaya" href="https://yandex.ru/maps/?rtext=~55.844624,37.502101&rtt=auto" class="mt-6 inline-flex h-11 px-5 rounded-full border border-[#14161A] items-center gap-2 text-[15px] font-semibold"><iconify-icon icon="lucide:navigation" width="16"></iconify-icon>Построить маршрут</a>
+        </div>
+        <div class="card p-8">
+          <div class="flex items-center justify-between"><div class="text-[14px] text-[#8A9099]">Юго-восток Москвы</div><span class="text-[13px] font-medium text-[#2E8B57]">Открыто до 23:00</span></div>
+          <div class="mt-3 text-[22px] font-semibold">Остаповский пр-д, д. 4, стр. 2</div>
+          <a id="route-ostapovsky" href="https://yandex.ru/maps/?rtext=~55.719817,37.704367&rtt=auto" class="mt-6 inline-flex h-11 px-5 rounded-full border border-[#14161A] items-center gap-2 text-[15px] font-semibold"><iconify-icon icon="lucide:navigation" width="16"></iconify-icon>Построить маршрут</a>
+        </div>
+      </div>
+      <div class="rounded-[28px] bg-[#E6E2DB] min-h-[420px] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-60" style="background-image:linear-gradient(#d6d1c8 1px,transparent 1px),linear-gradient(90deg,#d6d1c8 1px,transparent 1px);background-size:48px 48px"></div>
+        <div class="absolute left-[38%] top-[26%] flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-[#C8662B] text-white flex items-center justify-center shadow-lg"><iconify-icon icon="lucide:map-pin" width="22"></iconify-icon></div><div class="mt-2 px-3 py-1 rounded-full bg-white text-[13px] font-semibold shadow">Смольная, 2</div></div>
+        <div class="absolute left-[68%] top-[64%] flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-[#14161A] text-white flex items-center justify-center shadow-lg"><iconify-icon icon="lucide:map-pin" width="22"></iconify-icon></div><div class="mt-2 px-3 py-1 rounded-full bg-white text-[13px] font-semibold shadow">Остаповский, 4</div></div>
+        <div class="absolute bottom-5 left-5 text-[12px] text-[#8A9099]">Здесь будет карта Яндекса</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="max-w-[1200px] mx-auto px-6 pb-20">
+    <div class="rounded-[28px] bg-[#C8662B] text-white p-14 flex flex-wrap items-center justify-between gap-8">
+      <div>
+        <h2 class="h2 text-[44px] font-bold max-w-[560px]">Узнайте цену за одну минуту</h2>
+        <p class="mt-3 text-[18px] text-white/80">Звоните ежедневно с 8:00 до 23:00</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a id="final-call" href="tel:+74993907915" class="h-14 px-8 rounded-full bg-white text-[#14161A] flex items-center gap-3 text-[17px] font-semibold num"><iconify-icon icon="lucide:phone" width="20"></iconify-icon>8 (499) 390-79-15</a>
+        <a id="final-whatsapp" href="https://wa.me/79199947355" class="h-14 px-7 rounded-full border border-white/50 flex items-center gap-3 text-[17px] font-semibold hover:bg-white/10"><iconify-icon icon="ic:baseline-whatsapp" width="22"></iconify-icon>WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#E2DED7]">
+    <div class="max-w-[1200px] mx-auto px-6 py-14 grid md:grid-cols-4 gap-10 text-[15px] text-[#4A4F57]">
+      <div>
+        <div class="text-[24px] font-extrabold tracking-[-0.04em] text-[#14161A]">skuprum</div>
+        <p class="mt-3">Приём металла в Москве</p>
+      </div>
+      <div class="space-y-2">
+        <div class="text-[13px] uppercase tracking-[0.12em] text-[#8A9099] mb-3">Телефоны</div>
+        <a id="footer-phone-1" href="tel:+74993907915" class="block text-[#14161A] font-medium num">8 (499) 390-79-15</a>
+        <a id="footer-phone-2" href="tel:+79199947355" class="block text-[#14161A] font-medium num">8 (919) 994-73-55</a>
+      </div>
+      <div class="space-y-2">
+        <div class="text-[13px] uppercase tracking-[0.12em] text-[#8A9099] mb-3">Адреса</div>
+        <p>ул. Смольная, д. 2</p>
+        <p>Остаповский пр-д, д. 4, стр. 2</p>
+      </div>
+      <div class="space-y-2">
+        <div class="text-[13px] uppercase tracking-[0.12em] text-[#8A9099] mb-3">Почта</div>
+        <a id="footer-email" href="mailto:9264106363@mail.ru" class="block text-[#14161A] font-medium">9264106363@mail.ru</a>
+        <p class="pt-6 text-[13px] text-[#8A9099]">© 2026 Скупрум</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
