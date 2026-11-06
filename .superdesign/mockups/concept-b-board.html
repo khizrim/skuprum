@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скупрум — концепция B: табло цен</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body{margin:0;background:#EDEAE3;color:#111;font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+  .flap{background:#161616;color:#F3EFE6;border-radius:4px;position:relative;display:inline-flex;align-items:center;justify-content:center}
+  .flap::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.07)}
+  .lead{flex:1;border-bottom:2px dotted #B9B3A8;margin:0 14px;transform:translateY(5px)}
+  .row:hover{background:#E3DFD6}
+</style>
+</head>
+<body>
+<div id="root" class="min-h-screen">
+  <header class="border-b-2 border-[#111]">
+    <div class="max-w-[1320px] mx-auto px-8 h-16 flex items-center justify-between">
+      <a id="logo" href="#top" class="text-[24px] font-extrabold tracking-[-0.04em]">skuprum</a>
+      <div class="mono text-[13px] uppercase tracking-[0.08em] flex items-center gap-8">
+        <span class="flex items-center gap-2"><span class="w-2 h-2 bg-[#E4002B] rounded-full"></span>Котировки на 06.11.2026, 09:00</span>
+        <a id="header-phone" href="tel:+74993907915" class="font-semibold">8 (499) 390-79-15</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="top" class="max-w-[1320px] mx-auto px-8 pt-14 pb-16 grid grid-cols-[1fr_1.15fr] gap-16">
+    <div class="flex flex-col">
+      <div class="mono text-[13px] uppercase tracking-[0.12em] text-[#6B665E]">Пункт приёма металла · Москва · 08–23 без выходных</div>
+      <h1 class="mt-8 text-[104px] font-black leading-[.88] tracking-[-0.055em]">Цена<br>металла<br>сегодня.</h1>
+      <p class="mt-10 text-[20px] leading-[1.5] max-w-[460px]">Без «от» и «до». Табло обновляется каждое утро. Взвешиваем при вас, платим за 5 минут.</p>
+
+      <div class="mt-auto pt-12">
+        <div class="border-2 border-[#111] p-6">
+          <div class="mono text-[12px] uppercase tracking-[0.12em] text-[#6B665E] mb-4">Посчитать</div>
+          <div class="flex items-center gap-3 text-[28px] font-semibold">
+            <span class="mono border-b-2 border-[#111] px-2">120</span> кг
+            <span class="border-b-2 border-[#111] px-2">меди</span>
+            <span class="text-[#6B665E]">=</span>
+            <span class="flap mono text-[30px] h-14 px-4">119 880 ₽</span>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <a id="hero-call" href="tel:+74993907915" class="h-16 bg-[#E4002B] text-white flex items-center justify-center text-[18px] font-semibold hover:bg-[#C00024]">Позвонить</a>
+          <a id="hero-wa" href="https://wa.me/79199947355" class="h-16 border-2 border-[#111] flex items-center justify-center text-[18px] font-semibold hover:bg-[#111] hover:text-white">Фото в WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#F7F5F0] border-2 border-[#111]">
+      <div class="flex items-center justify-between px-6 h-14 border-b-2 border-[#111] mono text-[12px] uppercase tracking-[0.12em]">
+        <span>Металл</span><span>₽ / кг</span>
+      </div>
+      <div class="mono text-[20px]">
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Медь</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">999</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Кабель</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">888</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Бронза</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">777</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Латунь</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">666</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Алюминий</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">222</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Свинец</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">111</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Банка алюм.</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">88,8</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Нержавейка</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">55,5</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Аккумуляторы</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">55,5</span></div>
+        <div class="row flex items-center px-6 h-[58px] border-b border-[#D6D1C6]"><span class="font-medium">Олово</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">2 700</span></div>
+        <div class="row flex items-center px-6 h-[58px]"><span class="font-medium">Тантал</span><span class="lead"></span><span class="flap h-10 w-[120px] text-[22px] font-semibold">18 000</span></div>
+      </div>
+      <a id="board-all" href="#prices" class="flex items-center justify-between px-6 h-14 border-t-2 border-[#111] mono text-[13px] uppercase tracking-[0.12em] hover:bg-[#111] hover:text-white">Ещё 11 позиций<span>→</span></a>
+    </div>
+  </section>
+
+  <div class="border-y-2 border-[#111] bg-[#111] text-[#F3EFE6] overflow-hidden">
+    <div class="mono text-[14px] uppercase tracking-[0.1em] h-12 flex items-center gap-12 whitespace-nowrap px-8">
+      <span>★ 4,7 на Яндекс Картах · 25 отзывов</span><span>/</span><span>Вывоз цветмета от 50 кг в день заявки</span><span>/</span><span>Чермет от 500 кг</span><span>/</span><span>Наличные или перевод за 5 минут</span><span>/</span><span>Смольная, 2 · Остаповский пр-д, 4</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скупрум — концепция C: техчертёж</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body{margin:0;background:#F4F1EA;color:#1A1A1A;font-family:'Onest',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+  .grid-paper{background-image:linear-gradient(rgba(26,26,26,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(26,26,26,.06) 1px,transparent 1px),linear-gradient(rgba(26,26,26,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,26,26,.03) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+  svg text{font-family:'JetBrains Mono',monospace}
+</style>
+</head>
+<body>
+<div id="root" class="min-h-screen grid-paper">
+  <header class="max-w-[1320px] mx-auto px-8 h-20 flex items-center justify-between border-b border-[#1A1A1A]">
+    <a id="logo" href="#top" class="text-[26px] font-bold tracking-[-0.04em]">skuprum</a>
+    <nav class="mono text-[13px] flex items-center gap-8 uppercase tracking-[0.06em]">
+      <a id="nav-prices" href="#prices">01 Цены</a>
+      <a id="nav-how" href="#how">02 Процесс</a>
+      <a id="nav-contacts" href="#contacts">03 Адреса</a>
+      <a id="header-phone" href="tel:+74993907915" class="bg-[#1A1A1A] text-[#F4F1EA] px-4 h-10 flex items-center">8 (499) 390-79-15</a>
+    </nav>
+  </header>
+
+  <section id="top" class="max-w-[1320px] mx-auto px-8 grid grid-cols-[1fr_1.1fr] border-x border-b border-[#1A1A1A] bg-[#F4F1EA]/70">
+    <div class="p-12 border-r border-[#1A1A1A] flex flex-col">
+      <div class="mono text-[12px] uppercase tracking-[0.1em] text-[#77736B]">Лист 1 / Приём металла / Москва</div>
+      <h1 class="mt-10 text-[76px] font-bold leading-[.95] tracking-[-0.045em]">Знаем,<br>сколько стоит<br>каждая жила</h1>
+      <p class="mt-8 text-[19px] leading-[1.55] text-[#4A4740] max-w-[460px]">Разбираемся в марках и сортах, поэтому не режем цену «на всякий случай». Взвешиваем при вас, платим за 5 минут.</p>
+      <div class="mt-auto pt-12 flex gap-3">
+        <a id="hero-call" href="tel:+74993907915" class="h-14 px-8 bg-[#B5541E] text-white flex items-center text-[17px] font-semibold hover:bg-[#99441A]">Позвонить</a>
+        <a id="hero-wa" href="https://wa.me/79199947355" class="h-14 px-8 border border-[#1A1A1A] flex items-center text-[17px] font-medium hover:bg-[#1A1A1A] hover:text-white">Прислать фото</a>
+      </div>
+    </div>
+
+    <div class="relative p-8">
+      <svg viewBox="0 0 620 560" class="w-full h-auto" fill="none" stroke="#1A1A1A" stroke-width="1.2">
+        <!-- section A-A: cable cross-section -->
+        <g transform="translate(220 250)">
+          <circle r="170" stroke-width="1.6"/>
+          <circle r="150" stroke-dasharray="2 4" stroke="#77736B"/>
+          <!-- three insulated cores -->
+          <g transform="translate(0 -62)"><circle r="66" fill="#F4F1EA"/><circle r="40" fill="#D9763C" stroke="#7A3612"/><g stroke="#7A3612" stroke-width=".8" opacity=".55"><path d="M-28 -28 L28 28 M-38 -10 L10 38 M-10 -38 L38 10 M-36 10 L-10 36 M10 -36 L36 -10"/></g></g>
+          <g transform="translate(-54 31)"><circle r="66" fill="#F4F1EA"/><circle r="40" fill="#D9763C" stroke="#7A3612"/><g stroke="#7A3612" stroke-width=".8" opacity=".55"><path d="M-28 -28 L28 28 M-38 -10 L10 38 M-10 -38 L38 10 M-36 10 L-10 36 M10 -36 L36 -10"/></g></g>
+          <g transform="translate(54 31)"><circle r="66" fill="#F4F1EA"/><circle r="40" fill="#D9763C" stroke="#7A3612"/><g stroke="#7A3612" stroke-width=".8" opacity=".55"><path d="M-28 -28 L28 28 M-38 -10 L10 38 M-10 -38 L38 10 M-36 10 L-10 36 M10 -36 L36 -10"/></g></g>
+          <!-- center lines -->
+          <path d="M-200 0 H200 M0 -200 V200" stroke="#77736B" stroke-dasharray="14 4 2 4" stroke-width=".8"/>
+        </g>
+        <!-- dimension: outer diameter -->
+        <path d="M50 470 H390 M50 460 V480 M390 460 V480" />
+        <path d="M50 470 l10 -4 v8 z M390 470 l-10 -4 v8 z" fill="#1A1A1A"/>
+        <text x="220" y="496" text-anchor="middle" font-size="13" fill="#1A1A1A" stroke="none">Ø 34</text>
+        <!-- leader: copper core -->
+        <path d="M262 182 L330 110 H600" />
+        <circle cx="262" cy="182" r="3" fill="#1A1A1A"/>
+        <text x="340" y="100" font-size="13" fill="#1A1A1A" stroke="none">1  ЖИЛА — МЕДЬ</text>
+        <text x="340" y="132" font-size="22" fill="#B5541E" stroke="none" font-weight="500">999 ₽/кг</text>
+        <!-- leader: insulation -->
+        <path d="M325 268 L400 268 L430 238 H600" />
+        <circle cx="325" cy="268" r="3" fill="#1A1A1A"/>
+        <text x="440" y="228" font-size="13" fill="#1A1A1A" stroke="none">2  ИЗОЛЯЦИЯ — ПВХ</text>
+        <text x="440" y="258" font-size="13" fill="#77736B" stroke="none">снимать не нужно</text>
+        <!-- leader: whole cable -->
+        <path d="M372 330 L430 380 H600" />
+        <circle cx="372" cy="330" r="3" fill="#1A1A1A"/>
+        <text x="440" y="370" font-size="13" fill="#1A1A1A" stroke="none">3  КАБЕЛЬ ЦЕЛИКОМ</text>
+        <text x="440" y="402" font-size="22" fill="#B5541E" stroke="none" font-weight="500">888 ₽/кг</text>
+        <text x="20" y="30" font-size="12" fill="#77736B" stroke="none">РАЗРЕЗ А–А · М 2:1</text>
+      </svg>
+
+      <!-- title block -->
+      <div class="mt-2 ml-auto w-fit mono text-[11px] border border-[#1A1A1A] grid grid-cols-[auto_auto] bg-[#F4F1EA]">
+        <div class="px-3 py-2 border-r border-b border-[#1A1A1A] text-[#77736B]">ОБЪЕКТ</div><div class="px-3 py-2 border-b border-[#1A1A1A]">Кабель медный 3-жильный</div>
+        <div class="px-3 py-2 border-r border-b border-[#1A1A1A] text-[#77736B]">ВЫВОЗ</div><div class="px-3 py-2 border-b border-[#1A1A1A]">от 50 кг, в день заявки</div>
+        <div class="px-3 py-2 border-r border-[#1A1A1A] text-[#77736B]">ДАТА</div><div class="px-3 py-2">06.11.2026</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-[1320px] mx-auto px-8 grid grid-cols-4 border-x border-b border-[#1A1A1A] bg-[#F4F1EA]/70 mono">
+    <div class="p-6 border-r border-[#1A1A1A]"><div class="text-[11px] uppercase tracking-[0.1em] text-[#77736B]">Бронза</div><div class="mt-2 text-[28px]">777 ₽</div></div>
+    <div class="p-6 border-r border-[#1A1A1A]"><div class="text-[11px] uppercase tracking-[0.1em] text-[#77736B]">Латунь</div><div class="mt-2 text-[28px]">666 ₽</div></div>
+    <div class="p-6 border-r border-[#1A1A1A]"><div class="text-[11px] uppercase tracking-[0.1em] text-[#77736B]">Алюминий</div><div class="mt-2 text-[28px]">222 ₽</div></div>
+    <div class="p-6"><div class="text-[11px] uppercase tracking-[0.1em] text-[#77736B]">Яндекс Карты</div><div class="mt-2 text-[28px]">★ 4,7 <span class="text-[14px] text-[#77736B]">/ 25 отзывов</span></div></div>
+  </section>
+</div>
+</body>
+</html>
