@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "projectId": "299c7b38-cf8e-440e-bdf1-847a0b8b12b4",
+  "targets": {
+    "/": {
+      "kind": "existing-ui-redesign",
+      "activeDraftId": "954233e1-7cfa-4c98-8506-fec544f4bd92",
+      "activeVersion": 2,
+      "baselineDraftId": null,
+      "note": "v1 authored locally and imported (Superdesign credits were exhausted, no AI reproduction). Source: .superdesign/mockups/landing-v1.html",
+      "contextFiles": [".superdesign/design-system.md"]
+    }
+  }
+}
